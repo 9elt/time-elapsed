@@ -42,8 +42,8 @@ fn main() {
 
 <pre>
 running test...
-(<b><a href="#output">test</a></b>) <b>log() prints a message and the time elapsed</b> -> <b><a href="#output">200 ms</a></b>
-(<b><a href="#output">test</a></b>) <b>this is an offset from the previous timestamp()</b> -> <b><a href="#output">2103 μs</a></b>
-(<b><a href="#output">test</a></b>) <b>log_overall() ignores timestamps</b> -> <b><a href="#output">202 ms</a></b>
+(<a href="#output">test</a>) <b>log() prints a message and the time elapsed</b> -> <b><a href="#output">200 ms</a></b>
+(<a href="#output">test</a>) <b>this is an offset from the previous timestamp()</b> -> <b><a href="#output">2103 μs</a></b>
+(<a href="#output">test</a>) <b>log_overall() ignores timestamps</b> -> <b><a href="#output">202 ms</a></b>
 <b><a href="#output">test finished</a></b> in <b><a href="#output">202 ms</a></b> (202271 μs)
 </pre>

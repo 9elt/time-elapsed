@@ -39,8 +39,8 @@ fn main() {
 ### output
 <pre>
 running test...
-(<b>test</b>) log() prints a message and the time elapsed -> <b>200 ms</b>
-(<b>test</b>) this is an offset from the previous timestamp() -> <b>2103 μs</b>
-(<b>test</b>) log_overall() ignores timestamps -> <b>202 ms</b>
-<b>test finished</b> in <b>202 ms</b> (202271 μs)
+(<b><a href="#output">test</a></b>) <b>log() prints a message and the time elapsed</b> -> <b><a href="#output">200 ms</a></b>
+(<b><a href="#output">test</a></b>) <b>this is an offset from the previous timestamp()</b> -> <b><a href="#output">2103 μs</a></b>
+(<b><a href="#output">test</a></b>) <b>log_overall() ignores timestamps</b> -> <b><a href="#output">202 ms</a></b>
+<b><a href="#output">test finished</a></b> in <b><a href="#output">202 ms</a></b> (202271 μs)
 </pre>

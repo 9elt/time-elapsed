@@ -10,7 +10,7 @@ A Rust crate that provides a concise and handy way to benchmark **elapsed time i
 
 # example
 
-```
+```rust
 use std::thread;
 use std::time::Duration;
 

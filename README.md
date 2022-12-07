@@ -3,10 +3,10 @@
 A Rust crate that provides a concise and handy way to benchmark **elapsed time inside functions**.
 
 # features:
-* Name a benchmark
-* Set a timestamp
-* Print coloured messages
-* Auto adjusts the unit of measurement
+* the benchmark is named
+* can set a timestamp
+* prints coloured messages
+* auto adjusts the unit of measurement
 
 # example
 ### code

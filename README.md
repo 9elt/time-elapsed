@@ -2,14 +2,16 @@
 
 A Rust crate that provides a concise and handy way to benchmark **elapsed time inside functions**.
 
-# features:
-* the benchmark is named
-* can set a timestamp
-* prints coloured messages
-* auto adjusts the unit of measurement
+# features
+* named benchmark
+* timestamps
+* coloured messages
+* auto unit of measurement
 
 # example
+
 ### code
+
 ```rust
 use std::thread;
 use std::time::Duration;
@@ -37,6 +39,7 @@ fn main() {
 }
 ```
 ### output
+
 <pre>
 running test...
 (<b><a href="#output">test</a></b>) <b>log() prints a message and the time elapsed</b> -> <b><a href="#output">200 ms</a></b>

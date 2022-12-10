@@ -21,14 +21,14 @@ use time_elapsed;
 fn main() {
     let mut time = time_elapsed::start("test");
 
-    // sleep 200 milliseconds
+    // sleep 200 ms
     thread::sleep(Duration::from_millis(200));
 
     time
         .log("log() prints a message and the time elapsed")
         .timestamp();
 
-    // sleep 2 milliseconds
+    // sleep 2 ms
     thread::sleep(Duration::from_millis(2));
 
     time.log("this is an offset from the previous timestamp()");

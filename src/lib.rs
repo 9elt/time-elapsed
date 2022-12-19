@@ -1,22 +1,6 @@
 //! A Rust crate that provides a concise and handy way to benchmark **elapsed time inside functions**.
-//! > time-elapsed brings a small overhead, however, if you are trying to measure very small durations (in the order of *nanoseconds* or few *microseconds*), please consider using something else.
-//!
-//! ### installation
-//! Add the following to Cargo.toml
-//! ```
-//! [dependencies]
-//! time-elapsed = "0.1.0"
-//! ```
-//! 
-//! # features
-//! * named benchmark
-//! * timestamps
-//! * coloured messages
-//! * auto unit of measurement
 //! 
 //! # example
-//! 
-//! ### code
 //! 
 //! ```
 //! use std::thread;
@@ -26,6 +10,7 @@
 //! 
 //! fn main() {
 //!     let mut time = time_elapsed::start("test");
+//!     //output: running test...
 //! 
 //!     // sleep 200 ms
 //!     thread::sleep(Duration::from_millis(200));
@@ -33,28 +18,21 @@
 //!     time
 //!         .log("log() prints a message and the time elapsed")
 //!         .timestamp();
+//!     //output: log() prints a message and the time elapsed -> 200ms
 //! 
 //!     // sleep 2 ms
 //!     thread::sleep(Duration::from_millis(2));
 //! 
 //!     time.log("this is an offset from the previous timestamp()");
+//!     //output: (test) this is an offset from the previous timestamp() -> 2103 μs
 //! 
 //!     time.log_overall("log_overall() ignores timestamps");
+//!     //output: (test) log_overall() ignores timestamps -> 202 ms
 //! 
 //!     time.end();
+//!     //output: test finished in 202 ms (202271 μs)
 //! }
 //! ```
-//! 
-//! ### output
-//! 
-//! ```console
-//! running test...
-//! (test) log() prints a message and the time elapsed -> 200ms
-//! (test) this is an offset from the previous timestamp() -> 2103 μs
-//! (test) log_overall() ignores timestamps -> 202 ms
-//! test finished in 202 ms (202271 μs)
-//! ```
-//!
 
 use std::time::Instant;
 

@@ -59,7 +59,7 @@ use std::time::Instant;
 /// // output: running test...
 /// ```
 pub fn start<S: AsRef<str>>(name: S) -> TimeElapsed {
-    TimeElapsed::init(name.as_ref())
+    TimeElapsed::new(name.as_ref())
 }
 
 fn get_unit_of_measurement(nanos: u128) -> &'static str {
@@ -111,7 +111,7 @@ fn nanos_to_units_of_msr(nanos: u128, unit_of_msr: &str) -> [u128; 2] {
     }
 }
 
-/// Stores the benchmark state and provides methods (most methods need a mutable reference).
+/// Stores the benchmark state and provides methods (timestamp method needs a mutable reference).
 /// 
 /// To create an initialized instance use the **time_elapsed::start** function.
 /// 
@@ -122,7 +122,7 @@ fn nanos_to_units_of_msr(nanos: u128, unit_of_msr: &str) -> [u128; 2] {
 /// // output: running test...
 /// 
 /// ```
-#[derive(Debug, Clone)]
+#[derive(Clone, Eq, PartialEq, Ord, PartialOrd, Hash, Debug)]
 pub struct TimeElapsed {
     name: String,
     start_timestamp: Instant,
@@ -130,7 +130,8 @@ pub struct TimeElapsed {
 }
 
 impl TimeElapsed {
-    fn init(name: &str) -> Self {
+
+    fn new(name: &str) -> Self {
         println!("running {}...", name);
         Self {
             name: name.to_string(),
@@ -206,8 +207,8 @@ impl TimeElapsed {
     /// // output: running test...
     /// 
     /// thread::sleep(Duration::from_millis(200));
-    /// time.timestamp();
     /// 
+    /// time.timestamp();
     /// time.log_overall("The elapsed time from the start");
     /// // output: (test) The elapsed time from the start -> 200 ms
     /// 
@@ -229,6 +230,7 @@ impl TimeElapsed {
     /// // output: running test...
     /// 
     /// thread::sleep(Duration::from_millis(200));
+    /// 
     /// time.timestamp();
     /// 
     /// time.log("Elapsed time from the prev timestamp");

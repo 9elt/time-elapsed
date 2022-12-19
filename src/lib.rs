@@ -1,4 +1,12 @@
 //! A Rust crate that provides a concise and handy way to benchmark **elapsed time inside functions**.
+//! > time-elapsed brings a small overhead, however, if you are trying to measure very small durations (in the order of *nanoseconds* or few *microseconds*), please consider using something else.
+//!
+//! ### installation
+//! Add the following to Cargo.toml
+//! ```
+//! [dependencies]
+//! time-elapsed = "0.1.0"
+//! ```
 //! 
 //! # features
 //! * named benchmark
